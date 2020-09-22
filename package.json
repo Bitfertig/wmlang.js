@@ -1,0 +1,24 @@
+{
+    "name": "@dipser/wmlang.js",
+    "version": "1.0.0",
+    "description": "Translate months and weekdays.",
+    "author": "dipser",
+    "license": "MIT",
+    "main": "./index.js",
+    "module": "/index.js",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/Bitfertig/wmlang.js.git"
+    },
+    "keywords": [
+        "javascript",
+        "wmlang.js",
+        "date",
+        "intl",
+        "month",
+        "weekday"
+    ],
+    "devDependencies": {
+        
+    }
+}
