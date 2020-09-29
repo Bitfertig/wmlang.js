@@ -18,4 +18,4 @@ function weekday(weekday, locale = 'en') {
     return intl.format( new Date(1970, 0, Number(weekday) + 4 ) );
 }
 
-export { month, weekday };
+export { weekday, month };
