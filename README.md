@@ -1,5 +1,8 @@
 # wmlang.js
 
+Translate weekdays and months with "Intl", which is included by your browser.
+
+
 ## Demo
 
 http://tools.bitfertig.de/wmlang.js/
