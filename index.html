@@ -7,49 +7,67 @@
 </head>
 <body>
 
-    <h1>@dipser/wmlang.js</h1>
+    <header>
+        <h1>@dipser/wmlang.js</h1>
+        <p>Translate weekdays and months with "Intl", which is included by your browser.</p>
+    </header>
 
-    <p>Translate weekdays and months by browser language with intl.</p>
+
+    <h2>Install</h2>
+    <p>npm i @dipser/wmlang.js</p>
+
 
     <h2>Usage</h2>
-<div style="white-space: pre-wrap;">&lt;script type="module"&gt;
+    <div style="white-space:pre-wrap;">&lt;script type="module"&gt;
 import { weekday, month } from './index.js';
 console.log( weekday(1, 'de') );
 &lt;/script&gt;</div>
 
-    
+
+    <h2>Examples</h2>
     <script type="module">
     import { weekday, month } from './index.js';
     document.querySelector('#out').innerHTML = `
-<h2>Examples</h2>
-<h3>Weekdays</h3>
-<table>
-    <tr><th>en</th><td>${weekday(1)}</td><td>${weekday(2)}</td><td>${weekday(3)}</td><td>${weekday(4)}</td><td>${weekday(5)}</td><td>${weekday(6)}</td><td>${weekday(7)}</td></tr>
-    <tr><th>de</th><td>${weekday(1, 'de')}</td><td>${weekday(2, 'de')}</td><td>${weekday(3, 'de')}</td><td>${weekday(4, 'de')}</td><td>${weekday(5, 'de')}</td><td>${weekday(6, 'de')}</td><td>${weekday(7, 'de')}</td></tr>
-    <tr><th>fr</th><td>${weekday(1, 'fr')}</td><td>${weekday(2, 'fr')}</td><td>${weekday(3, 'fr')}</td><td>${weekday(4, 'fr')}</td><td>${weekday(5, 'fr')}</td><td>${weekday(6, 'fr')}</td><td>${weekday(7, 'fr')}</td></tr>
-    <tr><th>ja</th><td>${weekday(1, 'ja')}</td><td>${weekday(2, 'ja')}</td><td>${weekday(3, 'ja')}</td><td>${weekday(4, 'ja')}</td><td>${weekday(5, 'ja')}</td><td>${weekday(6, 'ja')}</td><td>${weekday(7, 'ja')}</td></tr>
-    <tr><th>ru</th><td>${weekday(1, 'ru')}</td><td>${weekday(2, 'ru')}</td><td>${weekday(3, 'ru')}</td><td>${weekday(4, 'ru')}</td><td>${weekday(5, 'ru')}</td><td>${weekday(6, 'ru')}</td><td>${weekday(7, 'ru')}</td></tr>
-    <tr><th>zh</th><td>${weekday(1, 'zh')}</td><td>${weekday(2, 'zh')}</td><td>${weekday(3, 'zh')}</td><td>${weekday(4, 'zh')}</td><td>${weekday(5, 'zh')}</td><td>${weekday(6, 'zh')}</td><td>${weekday(7, 'zh')}</td></tr>
-</table>
+        <h3>Weekdays</h3>
+        <table>
+            <tr><th>en</th><td>${weekday(1)}</td><td>${weekday(2)}</td><td>${weekday(3)}</td><td>${weekday(4)}</td><td>${weekday(5)}</td><td>${weekday(6)}</td><td>${weekday(7)}</td></tr>
+            <tr><th>de</th><td>${weekday(1, 'de')}</td><td>${weekday(2, 'de')}</td><td>${weekday(3, 'de')}</td><td>${weekday(4, 'de')}</td><td>${weekday(5, 'de')}</td><td>${weekday(6, 'de')}</td><td>${weekday(7, 'de')}</td></tr>
+            <tr><th>fr</th><td>${weekday(1, 'fr')}</td><td>${weekday(2, 'fr')}</td><td>${weekday(3, 'fr')}</td><td>${weekday(4, 'fr')}</td><td>${weekday(5, 'fr')}</td><td>${weekday(6, 'fr')}</td><td>${weekday(7, 'fr')}</td></tr>
+            <tr><th>ja</th><td>${weekday(1, 'ja')}</td><td>${weekday(2, 'ja')}</td><td>${weekday(3, 'ja')}</td><td>${weekday(4, 'ja')}</td><td>${weekday(5, 'ja')}</td><td>${weekday(6, 'ja')}</td><td>${weekday(7, 'ja')}</td></tr>
+            <tr><th>ru</th><td>${weekday(1, 'ru')}</td><td>${weekday(2, 'ru')}</td><td>${weekday(3, 'ru')}</td><td>${weekday(4, 'ru')}</td><td>${weekday(5, 'ru')}</td><td>${weekday(6, 'ru')}</td><td>${weekday(7, 'ru')}</td></tr>
+            <tr><th>zh</th><td>${weekday(1, 'zh')}</td><td>${weekday(2, 'zh')}</td><td>${weekday(3, 'zh')}</td><td>${weekday(4, 'zh')}</td><td>${weekday(5, 'zh')}</td><td>${weekday(6, 'zh')}</td><td>${weekday(7, 'zh')}</td></tr>
+        </table>
 
-<h2>Months</h2>
-<table>
-    <tr><th>en</th><td>${month(1)}</td><td>${month(2)}</td><td>${month(3)}</td><td>${month(4)}</td><td>${month(5)}</td><td>${month(6)}</td><td>${month(7)}</td><td>${month(8)}</td><td>${month(9)}</td><td>${month(10)}</td><td>${month(11)}</td><td>${month(12)}</td></tr>
-    <tr><th>de</th><td>${month(1, 'de')}</td><td>${month(2, 'de')}</td><td>${month(3, 'de')}</td><td>${month(4, 'de')}</td><td>${month(5, 'de')}</td><td>${month(6, 'de')}</td><td>${month(7, 'de')}</td><td>${month(8, 'de')}</td><td>${month(9, 'de')}</td><td>${month(10, 'de')}</td><td>${month(11, 'de')}</td><td>${month(12, 'de')}</td></tr>
-    <tr><th>fr</th><td>${month(1, 'fr')}</td><td>${month(2, 'fr')}</td><td>${month(3, 'fr')}</td><td>${month(4, 'fr')}</td><td>${month(5, 'fr')}</td><td>${month(6, 'fr')}</td><td>${month(7, 'fr')}</td><td>${month(8, 'fr')}</td><td>${month(9, 'fr')}</td><td>${month(10, 'fr')}</td><td>${month(11, 'fr')}</td><td>${month(12, 'fr')}</td></tr>
-    <tr><th>ja</th><td>${month(1, 'ja')}</td><td>${month(2, 'ja')}</td><td>${month(3, 'ja')}</td><td>${month(4, 'ja')}</td><td>${month(5, 'ja')}</td><td>${month(6, 'ja')}</td><td>${month(7, 'ja')}</td><td>${month(8, 'ja')}</td><td>${month(9, 'ja')}</td><td>${month(10, 'ja')}</td><td>${month(11, 'ja')}</td><td>${month(12, 'ja')}</td></tr>
-    <tr><th>ru</th><td>${month(1, 'ru')}</td><td>${month(2, 'ru')}</td><td>${month(3, 'ru')}</td><td>${month(4, 'ru')}</td><td>${month(5, 'ru')}</td><td>${month(6, 'ru')}</td><td>${month(7, 'ru')}</td><td>${month(8, 'ru')}</td><td>${month(9, 'ru')}</td><td>${month(10, 'ru')}</td><td>${month(11, 'ru')}</td><td>${month(12, 'ru')}</td></tr>
-    <tr><th>zh</th><td>${month(1, 'zh')}</td><td>${month(2, 'zh')}</td><td>${month(3, 'zh')}</td><td>${month(4, 'zh')}</td><td>${month(5, 'zh')}</td><td>${month(6, 'zh')}</td><td>${month(7, 'zh')}</td><td>${month(8, 'zh')}</td><td>${month(9, 'zh')}</td><td>${month(10, 'zh')}</td><td>${month(11, 'zh')}</td><td>${month(12, 'zh')}</td></tr>
-</table>
-`.trim();
+        <h3>Months</h3>
+        <table>
+            <tr><th>en</th><td>${month(1)}</td><td>${month(2)}</td><td>${month(3)}</td><td>${month(4)}</td><td>${month(5)}</td><td>${month(6)}</td><td>${month(7)}</td><td>${month(8)}</td><td>${month(9)}</td><td>${month(10)}</td><td>${month(11)}</td><td>${month(12)}</td></tr>
+            <tr><th>de</th><td>${month(1, 'de')}</td><td>${month(2, 'de')}</td><td>${month(3, 'de')}</td><td>${month(4, 'de')}</td><td>${month(5, 'de')}</td><td>${month(6, 'de')}</td><td>${month(7, 'de')}</td><td>${month(8, 'de')}</td><td>${month(9, 'de')}</td><td>${month(10, 'de')}</td><td>${month(11, 'de')}</td><td>${month(12, 'de')}</td></tr>
+            <tr><th>fr</th><td>${month(1, 'fr')}</td><td>${month(2, 'fr')}</td><td>${month(3, 'fr')}</td><td>${month(4, 'fr')}</td><td>${month(5, 'fr')}</td><td>${month(6, 'fr')}</td><td>${month(7, 'fr')}</td><td>${month(8, 'fr')}</td><td>${month(9, 'fr')}</td><td>${month(10, 'fr')}</td><td>${month(11, 'fr')}</td><td>${month(12, 'fr')}</td></tr>
+            <tr><th>ja</th><td>${month(1, 'ja')}</td><td>${month(2, 'ja')}</td><td>${month(3, 'ja')}</td><td>${month(4, 'ja')}</td><td>${month(5, 'ja')}</td><td>${month(6, 'ja')}</td><td>${month(7, 'ja')}</td><td>${month(8, 'ja')}</td><td>${month(9, 'ja')}</td><td>${month(10, 'ja')}</td><td>${month(11, 'ja')}</td><td>${month(12, 'ja')}</td></tr>
+            <tr><th>ru</th><td>${month(1, 'ru')}</td><td>${month(2, 'ru')}</td><td>${month(3, 'ru')}</td><td>${month(4, 'ru')}</td><td>${month(5, 'ru')}</td><td>${month(6, 'ru')}</td><td>${month(7, 'ru')}</td><td>${month(8, 'ru')}</td><td>${month(9, 'ru')}</td><td>${month(10, 'ru')}</td><td>${month(11, 'ru')}</td><td>${month(12, 'ru')}</td></tr>
+            <tr><th>zh</th><td>${month(1, 'zh')}</td><td>${month(2, 'zh')}</td><td>${month(3, 'zh')}</td><td>${month(4, 'zh')}</td><td>${month(5, 'zh')}</td><td>${month(6, 'zh')}</td><td>${month(7, 'zh')}</td><td>${month(8, 'zh')}</td><td>${month(9, 'zh')}</td><td>${month(10, 'zh')}</td><td>${month(11, 'zh')}</td><td>${month(12, 'zh')}</td></tr>
+        </table>
+    `.trim();
     </script>
-
 
     <div id="out"></div>
 
 
+    <h2>How it works</h2>
+    <div style="white-space:pre-wrap;">function month(month, locale = 'en') {
+    let intl = new Intl.DateTimeFormat(locale, { month: 'long' });
+    return intl.format( new Date(1970, Number(month) - 1, 1) );
+}
+month(2, 'de'); // => Februar</div>
+
+
+
     <footer style="margin-top:50px;">
-        <a href="https://www.npmjs.com/package/@dipser/wmlang.js">npm package @dipser/wmlang.js</a>
+        <h2>More</h2>
+        <ul>
+            <li><a href="https://www.npmjs.com/package/@dipser/wmlang.js">npm package @dipser/wmlang.js</a></li>
+            <li><a href="https://twitter.com/dipser">twitter dipser</a></li>
+        </ul>
     </footer>
 
 </body>
