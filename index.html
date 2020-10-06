@@ -4,57 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wmlang.js</title>
+    <meta name="keywords" content="wmlang, Intl, javascript, ecma, month, weekday, language">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
 
-    <header>
-        <h1>@dipser/wmlang.js</h1>
-        <p>Translate weekdays and months with "Intl", which is included by your browser.</p>
-    </header>
+    <div class="container">
+
+        <header class="mt-5">
+            <h1>@dipser/wmlang.js</h1>
+            <p>Translate weekdays and months with "Intl", which is included by your browser. It is a really minimal approach.</p>
+        </header>
 
 
-    <h2>Install</h2>
-    <p>npm i @dipser/wmlang.js</p>
+        <h2 class="mt-5">Install</h2>
+        <p>npm i @dipser/wmlang.js</p>
 
 
-    <h2>Usage</h2>
-    <div style="white-space:pre-wrap;">&lt;script type="module"&gt;
+        <h2 class="mt-5">Usage</h2>
+        <div style="white-space:pre-wrap;">&lt;script type="module"&gt;
 import { weekday, month } from './index.js';
-console.log( weekday(1, 'de') );
+console.log( weekday(1, 'de') ); // => Montag
 &lt;/script&gt;</div>
 
 
-    <h2>Examples</h2>
-    <script type="module">
-    import { weekday, month } from './index.js';
-    document.querySelector('#out').innerHTML = `
-        <h3>Weekdays</h3>
-        <table>
-            <tr><th>en</th><td>${weekday(1)}</td><td>${weekday(2)}</td><td>${weekday(3)}</td><td>${weekday(4)}</td><td>${weekday(5)}</td><td>${weekday(6)}</td><td>${weekday(7)}</td></tr>
-            <tr><th>de</th><td>${weekday(1, 'de')}</td><td>${weekday(2, 'de')}</td><td>${weekday(3, 'de')}</td><td>${weekday(4, 'de')}</td><td>${weekday(5, 'de')}</td><td>${weekday(6, 'de')}</td><td>${weekday(7, 'de')}</td></tr>
-            <tr><th>fr</th><td>${weekday(1, 'fr')}</td><td>${weekday(2, 'fr')}</td><td>${weekday(3, 'fr')}</td><td>${weekday(4, 'fr')}</td><td>${weekday(5, 'fr')}</td><td>${weekday(6, 'fr')}</td><td>${weekday(7, 'fr')}</td></tr>
-            <tr><th>ja</th><td>${weekday(1, 'ja')}</td><td>${weekday(2, 'ja')}</td><td>${weekday(3, 'ja')}</td><td>${weekday(4, 'ja')}</td><td>${weekday(5, 'ja')}</td><td>${weekday(6, 'ja')}</td><td>${weekday(7, 'ja')}</td></tr>
-            <tr><th>ru</th><td>${weekday(1, 'ru')}</td><td>${weekday(2, 'ru')}</td><td>${weekday(3, 'ru')}</td><td>${weekday(4, 'ru')}</td><td>${weekday(5, 'ru')}</td><td>${weekday(6, 'ru')}</td><td>${weekday(7, 'ru')}</td></tr>
-            <tr><th>zh</th><td>${weekday(1, 'zh')}</td><td>${weekday(2, 'zh')}</td><td>${weekday(3, 'zh')}</td><td>${weekday(4, 'zh')}</td><td>${weekday(5, 'zh')}</td><td>${weekday(6, 'zh')}</td><td>${weekday(7, 'zh')}</td></tr>
-        </table>
+        <h2 class="mt-5">Examples</h2>
+        <script type="module">
+        import { weekday, month } from './index.js';
+        document.querySelector('#out').innerHTML = `
+            <h3>Weekdays</h3>
+            <table class="table border w-100">
+                <thead class="thead-light">
+                    <tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th>en</th><td>${weekday(1)}</td><td>${weekday(2)}</td><td>${weekday(3)}</td><td>${weekday(4)}</td><td>${weekday(5)}</td><td>${weekday(6)}</td><td>${weekday(7)}</td></tr>
+                    <tr><th>de</th><td>${weekday(1, 'de')}</td><td>${weekday(2, 'de')}</td><td>${weekday(3, 'de')}</td><td>${weekday(4, 'de')}</td><td>${weekday(5, 'de')}</td><td>${weekday(6, 'de')}</td><td>${weekday(7, 'de')}</td></tr>
+                    <tr><th>fr</th><td>${weekday(1, 'fr')}</td><td>${weekday(2, 'fr')}</td><td>${weekday(3, 'fr')}</td><td>${weekday(4, 'fr')}</td><td>${weekday(5, 'fr')}</td><td>${weekday(6, 'fr')}</td><td>${weekday(7, 'fr')}</td></tr>
+                    <tr><th>ja</th><td>${weekday(1, 'ja')}</td><td>${weekday(2, 'ja')}</td><td>${weekday(3, 'ja')}</td><td>${weekday(4, 'ja')}</td><td>${weekday(5, 'ja')}</td><td>${weekday(6, 'ja')}</td><td>${weekday(7, 'ja')}</td></tr>
+                    <tr><th>ru</th><td>${weekday(1, 'ru')}</td><td>${weekday(2, 'ru')}</td><td>${weekday(3, 'ru')}</td><td>${weekday(4, 'ru')}</td><td>${weekday(5, 'ru')}</td><td>${weekday(6, 'ru')}</td><td>${weekday(7, 'ru')}</td></tr>
+                    <tr><th>zh</th><td>${weekday(1, 'zh')}</td><td>${weekday(2, 'zh')}</td><td>${weekday(3, 'zh')}</td><td>${weekday(4, 'zh')}</td><td>${weekday(5, 'zh')}</td><td>${weekday(6, 'zh')}</td><td>${weekday(7, 'zh')}</td></tr>
+                </tbody>
+            </table>
 
-        <h3>Months</h3>
-        <table>
-            <tr><th>en</th><td>${month(1)}</td><td>${month(2)}</td><td>${month(3)}</td><td>${month(4)}</td><td>${month(5)}</td><td>${month(6)}</td><td>${month(7)}</td><td>${month(8)}</td><td>${month(9)}</td><td>${month(10)}</td><td>${month(11)}</td><td>${month(12)}</td></tr>
-            <tr><th>de</th><td>${month(1, 'de')}</td><td>${month(2, 'de')}</td><td>${month(3, 'de')}</td><td>${month(4, 'de')}</td><td>${month(5, 'de')}</td><td>${month(6, 'de')}</td><td>${month(7, 'de')}</td><td>${month(8, 'de')}</td><td>${month(9, 'de')}</td><td>${month(10, 'de')}</td><td>${month(11, 'de')}</td><td>${month(12, 'de')}</td></tr>
-            <tr><th>fr</th><td>${month(1, 'fr')}</td><td>${month(2, 'fr')}</td><td>${month(3, 'fr')}</td><td>${month(4, 'fr')}</td><td>${month(5, 'fr')}</td><td>${month(6, 'fr')}</td><td>${month(7, 'fr')}</td><td>${month(8, 'fr')}</td><td>${month(9, 'fr')}</td><td>${month(10, 'fr')}</td><td>${month(11, 'fr')}</td><td>${month(12, 'fr')}</td></tr>
-            <tr><th>ja</th><td>${month(1, 'ja')}</td><td>${month(2, 'ja')}</td><td>${month(3, 'ja')}</td><td>${month(4, 'ja')}</td><td>${month(5, 'ja')}</td><td>${month(6, 'ja')}</td><td>${month(7, 'ja')}</td><td>${month(8, 'ja')}</td><td>${month(9, 'ja')}</td><td>${month(10, 'ja')}</td><td>${month(11, 'ja')}</td><td>${month(12, 'ja')}</td></tr>
-            <tr><th>ru</th><td>${month(1, 'ru')}</td><td>${month(2, 'ru')}</td><td>${month(3, 'ru')}</td><td>${month(4, 'ru')}</td><td>${month(5, 'ru')}</td><td>${month(6, 'ru')}</td><td>${month(7, 'ru')}</td><td>${month(8, 'ru')}</td><td>${month(9, 'ru')}</td><td>${month(10, 'ru')}</td><td>${month(11, 'ru')}</td><td>${month(12, 'ru')}</td></tr>
-            <tr><th>zh</th><td>${month(1, 'zh')}</td><td>${month(2, 'zh')}</td><td>${month(3, 'zh')}</td><td>${month(4, 'zh')}</td><td>${month(5, 'zh')}</td><td>${month(6, 'zh')}</td><td>${month(7, 'zh')}</td><td>${month(8, 'zh')}</td><td>${month(9, 'zh')}</td><td>${month(10, 'zh')}</td><td>${month(11, 'zh')}</td><td>${month(12, 'zh')}</td></tr>
-        </table>
-    `.trim();
-    </script>
+            <h3>Months</h3>
+            <table class="table border w-100">
+                <thead class="thead-light">
+                    <tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th>en</th><td>${month(1)}</td><td>${month(2)}</td><td>${month(3)}</td><td>${month(4)}</td><td>${month(5)}</td><td>${month(6)}</td><td>${month(7)}</td><td>${month(8)}</td><td>${month(9)}</td><td>${month(10)}</td><td>${month(11)}</td><td>${month(12)}</td></tr>
+                    <tr><th>de</th><td>${month(1, 'de')}</td><td>${month(2, 'de')}</td><td>${month(3, 'de')}</td><td>${month(4, 'de')}</td><td>${month(5, 'de')}</td><td>${month(6, 'de')}</td><td>${month(7, 'de')}</td><td>${month(8, 'de')}</td><td>${month(9, 'de')}</td><td>${month(10, 'de')}</td><td>${month(11, 'de')}</td><td>${month(12, 'de')}</td></tr>
+                    <tr><th>fr</th><td>${month(1, 'fr')}</td><td>${month(2, 'fr')}</td><td>${month(3, 'fr')}</td><td>${month(4, 'fr')}</td><td>${month(5, 'fr')}</td><td>${month(6, 'fr')}</td><td>${month(7, 'fr')}</td><td>${month(8, 'fr')}</td><td>${month(9, 'fr')}</td><td>${month(10, 'fr')}</td><td>${month(11, 'fr')}</td><td>${month(12, 'fr')}</td></tr>
+                    <tr><th>ja</th><td>${month(1, 'ja')}</td><td>${month(2, 'ja')}</td><td>${month(3, 'ja')}</td><td>${month(4, 'ja')}</td><td>${month(5, 'ja')}</td><td>${month(6, 'ja')}</td><td>${month(7, 'ja')}</td><td>${month(8, 'ja')}</td><td>${month(9, 'ja')}</td><td>${month(10, 'ja')}</td><td>${month(11, 'ja')}</td><td>${month(12, 'ja')}</td></tr>
+                    <tr><th>ru</th><td>${month(1, 'ru')}</td><td>${month(2, 'ru')}</td><td>${month(3, 'ru')}</td><td>${month(4, 'ru')}</td><td>${month(5, 'ru')}</td><td>${month(6, 'ru')}</td><td>${month(7, 'ru')}</td><td>${month(8, 'ru')}</td><td>${month(9, 'ru')}</td><td>${month(10, 'ru')}</td><td>${month(11, 'ru')}</td><td>${month(12, 'ru')}</td></tr>
+                    <tr><th>zh</th><td>${month(1, 'zh')}</td><td>${month(2, 'zh')}</td><td>${month(3, 'zh')}</td><td>${month(4, 'zh')}</td><td>${month(5, 'zh')}</td><td>${month(6, 'zh')}</td><td>${month(7, 'zh')}</td><td>${month(8, 'zh')}</td><td>${month(9, 'zh')}</td><td>${month(10, 'zh')}</td><td>${month(11, 'zh')}</td><td>${month(12, 'zh')}</td></tr>
+                </tbody>
+            </table>
+        `.trim();
+        </script>
 
-    <div id="out"></div>
+        <div id="out"></div>
 
 
-    <h2>How it works</h2>
-    <div style="white-space:pre-wrap;">function month(month, locale = 'en') {
+        <h2 class="mt-5">How it works</h2>
+        <p>Since browsers have implemented <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a>, 
+            they have language support date output. See <a href="https://caniuse.com/?search=Intl">caniuse.com/Intl</a>. To use weekdays and months names for different things, we just need to select a Intl date and get the format of a weekday or month.</p>
+        
+        <div style="white-space:pre-wrap;">function month(month, locale = 'en') {
     let intl = new Intl.DateTimeFormat(locale, { month: 'long' });
     return intl.format( new Date(1970, Number(month) - 1, 1) );
 }
@@ -62,13 +79,16 @@ month(2, 'de'); // => Februar</div>
 
 
 
-    <footer style="margin-top:50px;">
-        <h2>More</h2>
-        <ul>
-            <li><a href="https://www.npmjs.com/package/@dipser/wmlang.js">npm package @dipser/wmlang.js</a></li>
-            <li><a href="https://twitter.com/dipser">twitter dipser</a></li>
-        </ul>
-    </footer>
+        <footer class="mt-5">
+            <h2>More</h2>
+            <ul>
+                <li><a href="https://www.npmjs.com/package/@dipser/wmlang.js">npm package @dipser/wmlang.js</a></li>
+                <li><a href="https://twitter.com/dipser">twitter dipser</a></li>
+                <li><a href="https://twitter.com/bitfertig">twitter bitfertig</a></li>
+            </ul>
+        </footer>
+
+    </div>
 
 </body>
 </html>
